@@ -6,11 +6,24 @@ This service is available at [http://graphhopper.sendung.de](http://graphhopper.
 
 ## Installation & data update
 
-TODO
+Download OSM data and download & build osmconvert:
 
-* The koeln.osm.pbf is a snapshot of OSM data for the region. See the Makefile for info on how to update.
+```
+make koeln.osm.pbf
+sh run.sh
+```
 
-* The software can run inside a Docker container. See Makefile (build) on how to create the image from the contained Dockerfile.
+After the graph data generation has finished, a line `graphhopper.http.GHServer - Started server at HTTP 8989` appears in the console. Kill the process using Ctrl + C. Then create a Docker image:
+
+```
+make build
+```
+
+To test the docker image locally, run this:
+
+```
+docker run --rm -ti -p 8989:8989 sendung.de/graphhopper-cgn
+```
 
 ## License
 
