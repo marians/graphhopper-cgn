@@ -8,5 +8,5 @@ koeln-regbez-latest.osm.pbf:
 osmconvert:
 	wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -O3 -o osmconvert
 
-build:
+build: koeln.osm.pbf
 	docker build -t sendung.de/graphhopper-cgn .
