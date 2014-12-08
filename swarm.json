@@ -1,0 +1,20 @@
+{
+	"app_name": "graphhopper-cgn",
+	"services": [
+		{
+			"service_name": "graphhopper",
+			"components": [
+				{
+					"component_name": "graphhopper",
+					"image": "registry.giantswarm.io/marian/graphhopper-cgn:latest",
+					"ports": [
+						"8989/tcp"
+					],
+					"domains": {
+						"graphhopper.alpha.giantswarm.io": "8989"
+					}
+				}
+			]
+		}
+	]
+}
