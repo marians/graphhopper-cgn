@@ -10,8 +10,9 @@
 					"ports": [
 						"8989/tcp"
 					],
+					"scaling_policy": {"min": 3},
 					"domains": {
-						"graphhopper.alpha.giantswarm.io": "8989"
+						"graphhopper.sendung.de": "8989"
 					}
 				}
 			]
